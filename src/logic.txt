@@ -1,0 +1,14 @@
+This is also one of the logic for finding that element
+
+
+const checkedList = checkboxInput.filter(each => each === event.target.id)
+    if (checkedList.length === 0) {
+      this.setState(prevState => ({
+        checkboxInput: [...prevState.checkboxInput, event.target.id],
+      }))
+    } else {
+      const filterData = checkboxInput.filter(each => each === event.target.id)
+      this.setState({
+        checkboxInput: filterData,
+      })
+    }
